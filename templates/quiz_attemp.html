@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Attempt | Digital Quiz Hub</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Quiz Attempt CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/quiz_attempt.css')}}">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-light py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/Available_quizzes">Digital Quiz Hub</a>
+  </div>
+</nav>
+
+<!-- ===== QUIZ HEADER ===== -->
+<section class="quiz-header">
+    <div class="quiz-timer">
+  Time Left: <span id="time" data-ti="{{t[0][0]/l}}" >{{"%.2f"|format(t[0][0]/l)}}</span>
+</div>
+
+  <div class="container">
+    <h1>{{rw[0][1]}}</h1>
+    <p>Total Questions: {{l}} | Time: {{t[0][0]}} Minutes</p>
+  </div>
+</section>
+
+<!-- ===== QUIZ CONTENT ===== -->
+<section class="quiz-content py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-md-10">
+        <div class="quiz-card">
+
+          <!-- Question 
+           <div class="question-nav mb-4">
+           <button class="q-btn active">1</button>
+          <button class="q-btn">2</button>
+          <button class="q-btn">3</button>
+          <button class="q-btn">4</button>
+          </div>-->
+
+          
+          <form  method="post">
+
+          <h5 class="question" id="que" data-name={{rw[i][2]}}>
+            Q{{i+1}}. {{rw[i][2]}}
+          </h5>
+
+          <!-- Options -->
+            <div class="form-check option">
+              <input class="form-check-input" type="radio" name="q1" value="{{rw[i][4]}}" id="opt1">
+              <label class="form-check-label" for="opt1">
+                {{rw[i][4]}}
+              </label>
+            </div>
+
+            <div class="form-check option">
+              <input class="form-check-input" type="radio" name="q1" value="{{rw[i][5]}}" id="opt2">
+              <label class="form-check-label" for="opt2">
+                {{rw[i][5]}}
+              </label>
+            </div>
+
+            <div class="form-check option">
+              <input class="form-check-input" type="radio" name="q1" value="{{rw[i][6]}}" id="opt3">
+              <label class="form-check-label" for="opt3">
+                {{rw[i][6]}}
+              </label>
+            </div>
+
+            <div class="form-check option">
+              <input class="form-check-input" type="radio" name="q1" value="{{rw[i][7]}}" id="opt4">
+              <label class="form-check-label" for="opt4">
+                {{rw[i][7]}}
+              </label>
+            </div>
+
+            <!-- Navigation -->
+            <div class="quiz-actions mt-4 d-flex justify-content-between" >
+              <button type="submit" formaction="/Pre_available_question" class="btn btn-outline-primary">
+                Previous
+              </button>
+              <div>
+              <button type="submit"  formaction="/Next_available_question"  class="btn btn-primary">
+                Next
+              </button>
+              <button type="submit" formaction="/Submit_Quizz" id="sbut" name="stt" onclick="submitq()" class="btn btn-primary">
+                Submit
+              </button></div>
+            </div>
+
+          </form>
+
+          
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container text-center">
+    <p class="mb-0">
+      © 2026 Digital Quiz Hub | All Rights Reserved
+    </p>
+  </div>
+</footer>
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="{{url_for('static',filename='js/quiz_logic.js')}}"></script>
+
+</body>
+</html>

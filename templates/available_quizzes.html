@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Quizzes | Digital Quiz Hub</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/available_quizzes.css')}}">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-light py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/Dashboard">
+      Digital Quiz Hub
+    </a>
+  </div>
+</nav>
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="page-header">
+  <div class="container text-center">
+    <h1>Available Categories</h1>
+    <p>Select a category and start practicing</p>
+  </div>
+</section>
+
+<!-- ===== FILTER ===== -->
+<section class="filter-section py-4">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <select class="form-select" id="categoryFilter" name="Cate"
+                onchange="filterQuizzes()">
+          <option value="all">All Categories</option>
+          {%for cat in cate%}
+            <option value="{{cat[1]}}">{{cat[1]}}</option>
+            {%endfor%}
+        </select>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUIZ LIST ===== -->
+ <form action="/ExploreBtn" method="post">
+<section class="quiz-list py-5">
+  <div class="container">
+    <div class="row g-4" id="quizContainer">
+
+      <!-- Quiz Card -->
+      {%for cat in cate%}
+      <div class="col-md-4 quiz-item" data-category="{{cat[1]}}">
+        <div class="quiz-card">
+          <h5>{{cat[1]}}</h5>
+          <p>Category: {{cat[1]}}</p>
+          <p>Total Quizzes: {{cat[3]}}</p>
+          <button type="submit" class="btn btn-primary w-100" name="Explore" value={{cat[1]}}
+                  onclick="startQuiz('{{cat[1]}}')">
+            Explore Quizz
+          </button>
+        </div>
+      </div>
+      {%endfor%}
+</section>
+</form>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Page JS -->
+<script src="{{url_for('static',filename='js/available_quizzes.js')}}"></script>
+</body>
+</html>

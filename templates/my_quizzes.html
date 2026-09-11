@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Quizzes | Digital Quiz Hub</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/my_quizzes.css')}}">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-light py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/Dashboard">
+      Digital Quiz Hub
+    </a>
+  </div>
+</nav>
+
+<!-- ===== PAGE HEADER ===== -->
+<section class="page-header">
+  <div class="container text-center">
+    <h1>My Quizzes</h1>
+    <p>View your attempted quizzes and results</p>
+  </div>
+</section>
+
+<!-- ===== QUIZ TABLE ===== -->
+<section class="quiz-section py-5">
+  <div class="container">
+
+    <div class="table-responsive">
+      <table class="table quiz-table align-middle text-center">
+        <thead>
+          <tr>
+            <th>Quiz Name</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th>Score</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+
+        <tbody id="quizTableBody">
+          {%for i in rw%} 
+          <tr>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+            <td>{{i[5]}}</td>
+            <td>{{("%.2f"|format((i[6]*100)/i[7]))}}%</td>
+            {%if (i[6]*100)/i[7]>=40%}
+            <td>
+              <span class="badge success">Passed</span>
+            </td>
+            {%else%}
+            <td>
+              <span class="badge success">Failed</span>
+            </td>
+            {%endif%}
+            <td>
+              <button class="btn btn-outline-primary btn-sm"
+                      onclick="viewResult('{{i[3]}}','{{i[4]}}')">
+                View Result
+              </button>
+            </td>
+          </tr>
+          {%endfor%}
+
+          
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Page JS -->
+<script src="{{url_for('static',filename='js/my_quizzes.js')}}"></script>
+</body>
+</html>

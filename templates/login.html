@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Login | Digital Quiz Hub</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Login CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/login.css')}}">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-light py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/Index">Digital Quiz Hub</a>
+  </div>
+</nav>
+
+<!-- ===== LOGIN SECTION ===== -->
+<section class="login-section">
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <div class="col-md-6 col-lg-5">
+        <div class="login-card">
+
+          <h2 class="text-center mb-4">User Login</h2>
+
+          <form action="/LoginUser" method="POST">
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="form-label">Email Address</label>
+              <input type="email" name="Email" id="emai" class="form-control" placeholder="Enter your email">
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" id="pas" name="Password" class="form-control" placeholder="Enter your password">
+            </div>
+
+            <!-- Remember + Forgot -->
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="rememberMe">
+                <label class="form-check-label" for="rememberMe">
+                  Remember me
+                </label>
+              </div>
+
+              <a href="/Forgot_password" class="forgot-link">
+                Forgot Password?
+              </a>
+            </div>
+
+            <!-- Button -->
+            <button type="submit" onclick="log()"  class="btn btn-primary w-100">
+              Login
+            </button>
+          </form>
+
+          <!-- Register -->
+          <p class="text-center mt-3">
+            Don’t have an account?
+            <a href="/Register">Register</a>
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{url_for('static',filename='js/login.js')}}"></script>
+
+</body>
+</html>

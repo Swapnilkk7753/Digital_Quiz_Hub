@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Digital Quiz Hub</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Admin CSS -->
+  <link rel="stylesheet" href="{{url_for('static',filename='css/admin_dashboard.css')}}">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-light py-3">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="/Home">
+      Admin Panel – Digital Quiz Hub
+    </a>
+
+    <!-- PROFILE DROPDOWN -->
+    <div class="dropdown">
+      <button class="btn profile-btn dropdown-toggle" data-bs-toggle="dropdown">
+        👤
+      </button>
+
+      <ul class="dropdown-menu dropdown-menu-end">
+        <li class="px-3 py-2">
+          <strong id="adminNameText">{{name}}</strong><br>
+          <small id="adminEmailText">{{email}}</small>
+        </li>
+        <li><hr class="dropdown-divider"></li>
+        <li>
+          <button class="dropdown-item" onclick="openEditProfile()">
+            Edit Profile
+          </button>
+        </li>
+        <li>
+          <a class="dropdown-item text-danger" href="/Logout">
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+<!-- ===== DASHBOARD ===== -->
+<section class="dashboard py-5">
+  <div class="container">
+
+    <h2 class="mb-4">Welcome, {{name}}</h2>
+
+    <!-- ===== STATS ===== -->
+    <div class="row g-4 mb-5">
+      <div class="col-md-3">
+        <div class="stat-card" data-count={{ur}}>
+          <h4>Total Users</h4>
+          <p class="count">0</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="stat-card" data-count={{qz}}>
+          <h4>Total Quizzes</h4>
+          <p class="count">0</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="stat-card" data-count={{qs}}>
+          <h4>Total Questions</h4>
+          <p class="count">0</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="stat-card" data-count={{Ta}}>
+          <h4>Total Attempts</h4>
+          <p class="count">0</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ADMIN ACTIONS ===== -->
+    <h4 class="mb-3">Admin Actions</h4>
+
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="admin-card" onclick="openModule('/Admin_users')">
+          <h5>User Management</h5>
+          <p>Manage registered users</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="admin-card" onclick="openModule('/Admin_categories')">
+          <h5>Category Management</h5>
+          <p>Add & edit categories</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="admin-card" onclick="openModule('/Admin_quizzes')">
+          <h5>Quiz Management</h5>
+          <p>Create & manage quizzes</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="admin-card" onclick="openModule('/Admin_questions')">
+          <h5>Question Management</h5>
+          <p>Add & edit questions</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="admin-card" onclick="openModule('/Admin_results')">
+          <h5>Results</h5>
+          <p>View quiz results</p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="admin-card" onclick="openModule('/Admin_enquiries')">
+          <h5>Enquiries</h5>
+          <p>User messages & feedback</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== EDIT PROFILE MODAL ===== -->
+<div class="modal fade" id="editProfileModal" tabindex="-1">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Edit Profile</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <label class="form-label">Admin Name</label>
+        <input type="text" id="adminNameInput" class="form-control">
+      </div>
+<form method="post">
+      <div class="modal-footer">
+        <button class="btn btn-secondary btn-sm" data-bs-dismiss="modal">
+          Cancel
+        </button>
+        <button class="btn btn-primary btn-sm"  formaction="/Admin_dashboard" onclick="saveAdminProfile()">
+          Save
+        </button>
+      </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Admin JS -->
+<script src="{{url_for('static',filename='js/admin_dashboard.js')}}"></script>
+</body>
+</html>

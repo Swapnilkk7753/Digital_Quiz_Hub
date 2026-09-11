@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Result | Digital Quiz Hub</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Result CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/result.css')}}">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-light py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/Dashboard">Digital Quiz Hub</a>
+  </div>
+</nav>
+
+<!-- ===== RESULT HEADER ===== -->
+<section class="result-hero">
+  <div class="container text-center">
+    <h1>Quiz <span>Result</span></h1>
+    <p>Here is your performance summary</p>
+  </div>
+</section>
+
+<!-- ===== RESULT SUMMARY ===== -->
+<section class="result-summary py-5">
+  <div class="container">
+
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+
+        <div class="result-card text-center">
+
+        <div> <h1>Firstly Attempt the Quizzes</h1></div>
+
+          <div class="result-actions mt-4">
+            <a href="/Available_quizzes" class="btn btn-outline-primary me-2">
+              Go to Quizzes
+            </a>
+            <a href="/Dashboard" class="btn btn-primary">
+              Go to Dashboard
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container text-center">
+    <p class="mb-0">
+      © 2026 Digital Quiz Hub | All Rights Reserved
+    </p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

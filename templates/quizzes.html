@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizzes | Digital Quiz Hub</title>
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Quizzes CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/quizzes.css')}}">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg navbar-light py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/Index">Digital Quiz Hub</a>
+  </div>
+</nav>
+
+<!-- ===== QUIZ HERO ===== -->
+<section class="quiz-hero">
+  <div class="container text-center">
+    <h1>Available <span>Quizzes</span></h1>
+    <p>
+      Choose a quiz category and start testing your knowledge.
+    </p>
+  </div>
+</section>
+
+<!-- ===== QUIZ LIST ===== -->
+<section class="quiz-list py-5">
+  <div class="container">
+
+    <div class="row gx-4 gy-4">
+
+      <!-- Quiz Card -->
+      <div class="col-md-4">
+        <div class="quiz-card">
+          <h5>Programming Quiz</h5>
+          <p>Test your programming fundamentals and logic skills.</p>
+          <span class="badge">20 Questions</span>
+          <a href="#" class="btn btn-primary mt-3">Start Quiz</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="quiz-card">
+          <h5>Aptitude Quiz</h5>
+          <p>Improve problem-solving and quantitative aptitude.</p>
+          <span class="badge">15 Questions</span>
+          <a href="#" class="btn btn-primary mt-3">Start Quiz</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="quiz-card">
+          <h5>General Knowledge</h5>
+          <p>Enhance your awareness with general knowledge quizzes.</p>
+          <span class="badge">25 Questions</span>
+          <a href="#" class="btn btn-primary mt-3">Start Quiz</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="quiz-card">
+          <h5>Database & SQL</h5>
+          <p>Practice SQL queries and database concepts.</p>
+          <span class="badge">20 Questions</span>
+          <a href="#" class="btn btn-primary mt-3">Start Quiz</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="quiz-card">
+          <h5>Web Development</h5>
+          <p>Test your HTML, CSS, and JavaScript knowledge.</p>
+          <span class="badge">18 Questions</span>
+          <a href="#" class="btn btn-primary mt-3">Start Quiz</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="quiz-card">
+          <h5>Competitive Exams</h5>
+          <p>Prepare for placement and competitive examinations.</p>
+          <span class="badge">30 Questions</span>
+          <a href="#" class="btn btn-primary mt-3">Start Quiz</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container text-center">
+    <p class="mb-0">
+      © 2026 Digital Quiz Hub | All Rights Reserved
+    </p>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
