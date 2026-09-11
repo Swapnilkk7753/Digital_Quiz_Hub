@@ -1,0 +1,110 @@
+/* Global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f7fbff, #ffffff);
+  color: #0f172a;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #1e40af;
+}
+
+/* Result Hero */
+.result-hero {
+  padding: 70px 20px;
+}
+
+.result-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.result-hero h1 span {
+  color: #2563eb;
+}
+
+.result-hero p {
+  color: #475569;
+  font-size: 1.1rem;
+}
+
+/* Result Card */
+.result-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+}
+
+/* Score */
+.score {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+/* Status */
+.status {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.status.pass {
+  color: #15803d;
+}
+
+.status.fail {
+  color: #b91c1c;
+}
+
+/* Summary boxes */
+.summary-box {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.summary-box h5 {
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.summary-box p {
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #2563eb;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 24px;
+}
+
+.btn-outline-primary {
+  border-radius: 30px;
+  padding: 8px 24px;
+}
+
+/* Footer */
+.footer {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .score {
+    font-size: 3rem;
+  }
+
+  .result-card {
+    padding: 25px;
+  }
+}

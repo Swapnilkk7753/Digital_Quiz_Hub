@@ -1,0 +1,62 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f7fbff, #ffffff);
+  color: #0f172a;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #1e40af;
+}
+
+/* Header */
+.page-header {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+
+.page-header p {
+  color: #475569;
+}
+
+/* Filter */
+.filter-section select {
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+/* Quiz cards */
+.quiz-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.quiz-card:hover {
+  transform: translateY(-6px);
+}
+
+.quiz-card h5 {
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.quiz-card p {
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.quiz-card .btn {
+  border-radius: 30px;
+  margin-top: 12px;
+}

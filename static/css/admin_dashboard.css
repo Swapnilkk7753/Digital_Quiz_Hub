@@ -1,0 +1,61 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f7fbff, #ffffff);
+  color: #0f172a;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #1e40af;
+}
+
+/* Profile button */
+.profile-btn {
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+}
+
+/* Stat cards */
+.stat-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.stat-card h4 {
+  font-size: 1rem;
+  color: #475569;
+}
+
+.stat-card .count {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+/* Admin cards */
+.admin-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.admin-card:hover {
+  transform: translateY(-8px);
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.admin-card p {
+  font-size: 0.9rem;
+  color: #475569;
+}

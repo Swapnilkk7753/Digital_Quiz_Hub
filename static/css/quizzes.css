@@ -1,0 +1,99 @@
+/* Global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f7fbff, #ffffff);
+  color: #0f172a;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #1e40af;
+}
+
+/* Quiz Hero */
+.quiz-hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.quiz-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.quiz-hero h1 span {
+  color: #2563eb;
+}
+
+.quiz-hero p {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-top: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Quiz Cards */
+.quiz-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.quiz-card h5 {
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.quiz-card p {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.quiz-card .badge {
+  display: inline-block;
+  background: #eff6ff;
+  color: #2563eb;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+
+.quiz-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.08);
+}
+
+/* Button */
+.btn-primary {
+  background-color: #2563eb;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 22px;
+}
+
+.btn-primary:hover {
+  background-color: #1e40af;
+}
+
+/* Footer */
+.footer {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .quiz-hero h1 {
+    font-size: 2.2rem;
+  }
+}

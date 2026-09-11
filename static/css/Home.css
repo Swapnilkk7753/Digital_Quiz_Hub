@@ -1,0 +1,153 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f7fbff, #ffffff);
+  color: #0f172a;
+  
+}
+
+/* =========================
+   NAVBAR (SAME AS INDEX)
+========================= */
+.navbar-brand {
+  font-weight: 700;
+  color: #1e40af;
+  font-size: 1.4rem;
+}
+
+.nav-link {
+  color: #334155 !important;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #2563eb !important;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  border: none;
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+
+.btn-outline-primary {
+  border-radius: 30px;
+  padding: 8px 20px;
+}
+
+/* =========================
+   HERO SECTION (HOME)
+========================= */
+.hero-section {
+  padding: 80px 0;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.hero-title span {
+  color: #2563eb;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-top: 15px;
+  max-width: 500px;
+}
+
+/* =========================
+   FEATURES SECTION
+========================= */
+.features-section {
+  padding: 70px 0;
+  background: #ffffff;
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.feature-card h5 {
+  color: #1e40af;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  font-weight: 400;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+.how-it-works {
+  padding: 60px 0;
+}
+
+.how-it-works .col-md-3 {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* =========================
+   STATS (OPTIONAL – SAME AS INDEX)
+========================= */
+.stats {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: #ffffff;
+  padding: 15px 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER (MATCHED COLOR)
+========================= */
+.footer {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .stats {
+    gap: 15px;
+  }
+
+  .stat-box {
+    width: 100%;
+    text-align: center;
+  }
+}

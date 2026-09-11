@@ -1,0 +1,91 @@
+/* Global */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f7fbff, #ffffff);
+  color: #0f172a;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #1e40af;
+}
+
+/* Terms Hero */
+.terms-hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.terms-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.terms-hero h1 span {
+  color: #2563eb;
+}
+
+.terms-hero p {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-top: 15px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Terms Content */
+.terms-content {
+  padding-bottom: 80px;
+}
+
+.terms-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.terms-card h3 {
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 15px;
+}
+
+.terms-card p {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.terms-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.terms-card ul li {
+  margin-bottom: 10px;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  background: #2563eb;
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .terms-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .terms-card {
+    padding: 25px;
+  }
+}

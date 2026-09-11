@@ -1,0 +1,54 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f7fbff, #ffffff);
+  color: #0f172a;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #1e40af;
+}
+
+/* Page */
+.question-management h2 {
+  font-weight: 700;
+}
+
+/* Add question card */
+.card {
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+/* Table */
+.table {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.table thead {
+  background: #f1f5f9;
+}
+
+.table th {
+  color: #334155;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn-sm {
+  border-radius: 20px;
+}
+
+/* Output */
+#questionOutput {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  font-weight: 500;
+}
